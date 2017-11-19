@@ -1,3 +1,18 @@
+:host::before {
+  content: '';
+  width: 100vw;
+  height: 100vh;
+  background: #353535;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+}
+
 .slider {
   margin-bottom: 30px;
 }

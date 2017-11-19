@@ -11,7 +11,7 @@ const desktop_routes: Routes = [
   {
     path: '', component: DesktopFrontpageComponent, children:
     [
-      {path: ':productName', component: ProductComponent}
+      {path: 'product/:productName', component: ProductComponent}
     ]
   },
   {path: 'about', component: AboutComponent}
@@ -19,7 +19,7 @@ const desktop_routes: Routes = [
 
 const mobile_routes: Routes = [
   {path: '', component: MobileFrontpageComponent},
-  {path: ':productName', component: ProductComponent},
+  {path: 'product/:productName', component: ProductComponent},
   {path: 'about', component: AboutComponent},
   {path: 'user-profile', component: UserProfileComponent}
 ];

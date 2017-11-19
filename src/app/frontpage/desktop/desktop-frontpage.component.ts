@@ -58,7 +58,7 @@ export class DesktopFrontpageComponent implements OnInit, AfterViewInit {
   private initFlipster(): void {
     (<any>window).jQuery(this.slider.nativeElement).flipster({
       style: 'flat',
-      scrollwheel: false,
+      scrollwheel: true,
       loop: true,
       spacing: -0.35
     });

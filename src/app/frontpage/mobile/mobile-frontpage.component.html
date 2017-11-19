@@ -1,6 +1,10 @@
+<h1>
+  Cracking the Challenge - Multiple Views on Angular
+</h1>
+
 <ul class="images-list" *ngIf="myViewModel.sliderItems">
   <li class="image-item" *ngFor="let sliderItem of myViewModel.sliderItems">
-    <a [routerLink]="['/', sliderItem.productName]">
+    <a [routerLink]="['/product', sliderItem.productName]">
       <img [src]="sliderItem.imageSafeUrl" alt="{{sliderItem.productName}}">
     </a>
   </li>
