@@ -14,13 +14,14 @@ const desktop_routes: Routes = [
   {path: 'products/:id', component: ProductComponent},
   {path: 'products', component: ProductsComponent},
   {path: 'about', component: AboutComponent},
+  {path: 'user-profile', component: UserProfileComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 
 const mobile_routes: Routes = [
   {path: '', component: MobileFrontpageComponent},
-  {path: 'products-mobile/:id', component: ProductComponent},
-  {path: 'products-mobile', component: ProductsComponent},
+  {path: 'products/:id', component: ProductComponent},
+  {path: 'products', component: ProductsComponent},
   {path: 'about', component: AboutComponent},
   {path: 'user-profile', component: UserProfileComponent},
   {path: '**', component: PageNotFoundComponent}
