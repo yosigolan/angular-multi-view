@@ -1,9 +1,82 @@
-@import '../../assets/styles/constants';
+.the-team-header {
+  margin: 100px 0 90px;
 
-@media screen and (max-width: $max-mobile-display-width) {
-  @import 'about.component.mobile';
+  h2 {
+    color: #00a4e9;
+    margin-bottom: 20px;
+    font-size: 36px;
+  }
 }
 
-@media screen and (min-width: $min-desktop-display-width) {
-  @import 'about.component.desktop';
+.team-content {
+  margin: 0 auto;
+  max-width: 580px;
+  font-size: 18px;
+}
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.member {
+  width: 24%;
+  margin: 0 0 150px;
+}
+
+@media screen and (max-width: 1000px) {
+  .member {
+    width: 32%;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .member {
+    width: 49%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .member {
+    width: 100%;
+  }
+}
+
+.member-photo {
+  max-width: 100%;
+  margin-bottom: 25px;
+}
+
+h3 {
+  margin: 0 0 5px;
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 16px;
+  margin: 0 0 20px;
+}
+
+.member-details {
+  position: relative;
+
+  .member-social {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    max-width: 100px;
+
+    i {
+      padding-right: 15px;
+      float: left;
+      font-size: 16px;
+      color: #353535;
+    }
+
+    a:last-of-type i {
+      padding-right: 0;
+    }
+  }
 }
