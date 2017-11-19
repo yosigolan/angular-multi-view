@@ -30,7 +30,7 @@ const mobile_routes: Routes = [
   imports: [RouterModule.forRoot(desktop_routes, {preloadingStrategy: PreloadAllModules})],
   exports: [RouterModule]
 })
-export class AppBrowserRoutingModule {
+export class AppRoutingModule {
 
   public constructor(private router: Router,
     private applicationStateService: ApplicationStateService) {
