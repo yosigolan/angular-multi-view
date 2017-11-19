@@ -1,10 +1,25 @@
-<h1 class="product-title">
-  {{myViewModel.name}}
-</h1>
+<ng-container *ngIf="!isMobileResolution; else mobileTemplate">
+  <h1 class="product-title">
+    Desktop {{myViewModel.name}}
+  </h1>
 
-<img [src]="myViewModel.imageUrl" alt="{{myViewModel.name}} name">
+  <img [src]="myViewModel.imageUrl" alt="{{myViewModel.name}} name">
 
-<p>
-  {{myViewModel.description}}
-</p>
+  <p>
+    {{myViewModel.description}}
+  </p>
+</ng-container>
+
+<ng-template #mobileTemplate>
+
+  <h1 class="product-title">
+    Mobile {{myViewModel.name}}
+  </h1>
+
+  <img [src]="myViewModel.imageUrl" alt="{{myViewModel.name}} name">
+
+  <p>
+    {{myViewModel.description}}
+  </p>
+</ng-template>
 

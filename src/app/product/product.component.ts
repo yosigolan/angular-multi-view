@@ -1,8 +1,8 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component} from '@angular/core';
 import {ProductComponentModel} from './product.component.model';
 import {ActivatedRouteSnapshot, Router} from '@angular/router';
 import {DomSanitizer} from '@angular/platform-browser';
-import { ApplicationStateService } from '../../services/application-state-service/applicationState.service';
+import {ApplicationStateService} from '../../services/application-state-service/applicationState.service';
 
 @Component({
   selector: 'app-product',
@@ -17,7 +17,8 @@ export class ProductComponent implements AfterViewInit {
   public isMobileResolution: boolean;
 
   constructor(private router: Router,
-    private sanitizer: DomSanitizer,applicationStateService:ApplicationStateService) {
+    private sanitizer: DomSanitizer,
+    private applicationStateService: ApplicationStateService) {
     this.isMobileResolution = applicationStateService.getIsMobileResolution();
     this.model = new ProductComponentModel(sanitizer);
     this.myViewModel = new ProductComponentModel(sanitizer);
