@@ -25,6 +25,9 @@ import {ProductComponent} from './products/product/product.component';
     AppBrowserRoutingModule,
     FrontPageModule
   ],
+  entryComponents: [
+    UserProfileComponent
+  ],
   bootstrap: [
     AppComponent
   ]
