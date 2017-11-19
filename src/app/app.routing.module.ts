@@ -5,7 +5,6 @@ import {AboutComponent} from './about/about.component';
 import {MobileFrontpageComponent} from './frontpage/mobile/mobile-frontpage.component';
 import {UserProfileComponent} from './user-profile/user-profile.component';
 import {ApplicationStateService} from '../services/application-state-service/applicationState.service';
-import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {ProductsComponent} from './products/products.component';
 import {ProductComponent} from './products/product/product.component';
 
@@ -14,8 +13,7 @@ const desktop_routes: Routes = [
   {path: 'products/:id', component: ProductComponent},
   {path: 'products', component: ProductsComponent},
   {path: 'about', component: AboutComponent},
-  {path: 'user-profile', component: UserProfileComponent},
-  {path: '**', component: PageNotFoundComponent}
+  {path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 
 const mobile_routes: Routes = [
@@ -24,7 +22,7 @@ const mobile_routes: Routes = [
   {path: 'products', component: ProductsComponent},
   {path: 'about', component: AboutComponent},
   {path: 'user-profile', component: UserProfileComponent},
-  {path: '**', component: PageNotFoundComponent}
+  {path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 
 @NgModule({

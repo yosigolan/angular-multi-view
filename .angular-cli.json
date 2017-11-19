@@ -22,7 +22,10 @@
         "../node_modules/font-awesome/scss/font-awesome.scss",
         "styles.scss"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.js",
+        "../node_modules/jquery.flipster/src/jquery.flipster.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

@@ -7,7 +7,6 @@ import {FrontPageModule} from './frontpage/frontpage.module';
 import {AboutComponent} from './about/about.component';
 import {UserProfileComponent} from './user-profile/user-profile.component';
 import {CoreModule} from './core.module';
-import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {ProductsComponent} from './products/products.component';
 import {ProductComponent} from './products/product/product.component';
 
@@ -16,7 +15,6 @@ import {ProductComponent} from './products/product/product.component';
     AppComponent,
     AboutComponent,
     UserProfileComponent,
-    PageNotFoundComponent,
     ProductsComponent,
     ProductComponent
   ],
@@ -27,7 +25,9 @@ import {ProductComponent} from './products/product/product.component';
     AppBrowserRoutingModule,
     FrontPageModule
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule {
 }

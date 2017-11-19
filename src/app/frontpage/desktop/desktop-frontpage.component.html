@@ -1,13 +1,7 @@
-<div class="jumbotron">
-  <h1 class="display-3">Welcome to SeeVoov shop!</h1>
-  <p class="lead">Check out our <em>desktop version</em> of this super amazing totally real shop</p>
-
-  <hr class="my-4">
-
-  <p class="lead">
-    <a class="btn btn-primary btn-lg" routerLink="/products" routerLinkActive="active" role="button">
-      Go to desktop version
-    </a>
-  </p>
+<div class="slider" #slider>
+  <ul class="slides">
+    <li class="slide" *ngFor="let imageUrl of myViewModel.sliderItems">
+      <img [src]="imageUrl" alt="">
+    </li>
+  </ul>
 </div>
-

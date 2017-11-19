@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
+import {ApplicationStateService} from '../../services/application-state-service/applicationState.service';
 
 @Component({
   selector: 'app-user-profile',
@@ -7,4 +8,15 @@ import {Component} from '@angular/core';
 })
 export class UserProfileComponent {
 
+  public isMobileResolution: boolean;
+
+  @Output() public closeUserProfileEvent: EventEmitter<boolean> = new EventEmitter<boolean>();
+
+  constructor(private applicationStateService: ApplicationStateService) {
+    this.isMobileResolution = this.applicationStateService.getIsMobileResolution();
+  }
+
+  public close(): void {
+    this.closeUserProfileEvent.emit();
+  }
 }

@@ -1,0 +1,74 @@
+:host {
+  position: fixed;
+  width: 100%;
+  height: calc(100vh - 50px);
+  top: 0;
+  left: 0;
+  margin-top: 56px;
+}
+
+.top-user-profile-wrapper {
+  height: 450px;
+  background: #fff;
+}
+
+.top-user-profile-overlay {
+  height: calc(100vh - 500px);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.user-profile-header-wrapper {
+  border-bottom: 1px solid #ccc;
+}
+
+.user-profile-header {
+  display: inline-block;
+  width: 100%;
+  min-height: 91px;
+  padding: 30px 0;
+}
+
+.user-name {
+  margin: 0;
+  float: left;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.user-profile-content {
+  padding-top: 40px;
+
+  h2 {
+    margin: 0 0 40px;
+    color: #79c500;
+    font-size: 18px;
+  }
+}
+
+.form-group {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 25px;
+
+  input {
+    padding-left: 10px;
+  }
+
+  .col-sm-9 {
+    padding-left: 0;
+  }
+}
+
+.control-label {
+  margin-top: 5px;
+  padding: 0;
+  text-align: left;
+}
+
+.form-control {
+  padding-left: 0;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+  box-shadow: none;
+}

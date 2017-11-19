@@ -1,12 +1,5 @@
-<div class="jumbotron">
-  <h1 class="display-4">Welcome to SeeVoov shop!</h1>
-  <p class="lead">Check out our <em>mobile version</em> of this super amazing totally real shop</p>
-
-  <hr class="my-4">
-
-  <p class="lead">
-    <a class="btn btn-primary btn-lg" routerLink="/products-mobile" routerLinkActive="active" role="button">
-      Go to mobile version
-    </a>
-  </p>
-</div>
+<ul class="images-list" *ngIf="myViewModel.sanitizedImageUrls">
+  <li class="image-item" *ngFor="let image of myViewModel.sanitizedImageUrls">
+    <img [src]="image" alt="">
+  </li>
+</ul>

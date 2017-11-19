@@ -1,0 +1,71 @@
+:host {
+  margin-top: 50px;
+  background: #fff;
+}
+
+.user-profile-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background: #093e52;
+  border-bottom: 1px solid #cdcdcd;
+
+  h1 {
+    flex: 1;
+    margin: 0;
+    padding: 0 4vw;
+    font-size: 16px;
+    font-weight: 500;
+    color: #2cb9d7;
+  }
+
+  .close-user-profile-button {
+    width: 40px;
+    height: 60px;
+    border: none;
+    border-left: 1px solid rgba(220, 224, 224, 0.5);
+    background: none;
+
+    img {
+      width: 15px;
+    }
+  }
+}
+
+section {
+  padding: 50px 4vw;
+
+  h2 {
+    margin: 0 0 25px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #093e52;
+    text-transform: capitalize;
+  }
+}
+
+.account-info {
+  border-bottom: 1px solid #dce0e0;
+}
+
+.form-group {
+  display: flex;
+  margin-bottom: 25px;
+  font-size: 14px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  label {
+    flex: 1;
+    font-weight: 500;
+  }
+
+  input {
+    flex: 2;
+    border: none;
+    box-shadow: none;
+  }
+}
