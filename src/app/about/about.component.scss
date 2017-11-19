@@ -1,0 +1,9 @@
+@import '../../assets/styles/constants';
+
+@media screen and (max-width: $max-mobile-display-width) {
+  @import 'about.component.mobile';
+}
+
+@media screen and (min-width: $min-desktop-display-width) {
+  @import 'about.component.desktop';
+}

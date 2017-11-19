@@ -1,16 +1,33 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {AppComponent} from './app.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {AppBrowserRoutingModule} from './app.routing.module';
+import {FrontPageModule} from './frontpage/frontpage.module';
+import {AboutComponent} from './about/about.component';
+import {UserProfileComponent} from './user-profile/user-profile.component';
+import {CoreModule} from './core.module';
+import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
+import {ProductsComponent} from './products/products.component';
+import {ProductComponent} from './products/product/product.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AboutComponent,
+    UserProfileComponent,
+    PageNotFoundComponent,
+    ProductsComponent,
+    ProductComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    CoreModule,
+    AppBrowserRoutingModule,
+    FrontPageModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
