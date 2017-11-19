@@ -1,13 +1,14 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {MobileFrontpageComponentModel} from './mobile-frontpage.component.model';
 import {DomSanitizer, SafeResourceUrl} from '@angular/platform-browser';
+import {HomepageItems} from '../slider-item';
 
 @Component({
   selector: 'app-mobile-frontpage',
   templateUrl: './mobile-frontpage.component.html',
   styleUrls: ['./mobile-frontpage.component.scss']
 })
-export class MobileFrontpageComponent implements OnInit {
+export class MobileFrontpageComponent implements OnInit, AfterViewInit {
 
   private model: MobileFrontpageComponentModel;
   public myViewModel: MobileFrontpageComponentModel;
@@ -21,6 +22,10 @@ export class MobileFrontpageComponent implements OnInit {
     this.updateImageUrls();
 
     this.updateView();
+  }
+
+  public ngAfterViewInit(): void {
+    window.scrollTo(0, 0);
   }
 
   private updateView(): void {
@@ -37,8 +42,14 @@ export class MobileFrontpageComponent implements OnInit {
     imagesUrls.push('../../../assets/images/front-page/TripKinf_With_kids.jpg');
 
     imagesUrls.forEach((imageUrl: string) => {
-      let sanitizedImageUrl: SafeResourceUrl = this.sanitizer.bypassSecurityTrustResourceUrl(imageUrl);
-      this.model.sanitizedImageUrls.push(sanitizedImageUrl);
+      let sliderItem: HomepageItems = new HomepageItems();
+      let randomNumber: number = Math.random();
+      let productId: number = Math.round(randomNumber) + 1;
+
+      sliderItem.imageSafeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(imageUrl);
+      sliderItem.productName = `product-${productId.toString()}`;
+
+      this.model.sliderItems.push(sliderItem);
     });
   }
 }

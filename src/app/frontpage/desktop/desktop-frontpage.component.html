@@ -1,7 +1,11 @@
-<div class="slider" #slider>
+<div class="slider" #slider *ngIf="myViewModel.sliderItems">
   <ul class="slides">
-    <li class="slide" *ngFor="let imageUrl of myViewModel.sliderItems">
-      <img [src]="imageUrl" alt="">
+    <li class="slide" *ngFor="let sliderItem of myViewModel.sliderItems">
+      <a [routerLink]="['/', sliderItem.productName]">
+        <img [src]="sliderItem.imageSafeUrl" [alt]="sliderItem.productName">
+      </a>
     </li>
   </ul>
 </div>
+
+<router-outlet></router-outlet>

@@ -7,15 +7,13 @@ import {FrontPageModule} from './frontpage/frontpage.module';
 import {AboutComponent} from './about/about.component';
 import {UserProfileComponent} from './user-profile/user-profile.component';
 import {CoreModule} from './core.module';
-import {ProductsComponent} from './products/products.component';
-import {ProductComponent} from './products/product/product.component';
+import {ProductComponent} from './product/product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
     UserProfileComponent,
-    ProductsComponent,
     ProductComponent
   ],
   imports: [

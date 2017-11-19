@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {AboutComponentModel} from './about.component.model';
 
 @Component({
   selector: 'app-about',
@@ -8,16 +7,7 @@ import {AboutComponentModel} from './about.component.model';
 })
 export class AboutComponent {
 
-  private model: AboutComponentModel;
-  public myViewModel: AboutComponentModel;
-
   constructor() {
-    this.model = new AboutComponentModel();
 
-    this.updateView();
-  }
-
-  private updateView(): void {
-    this.myViewModel = this.model.clone();
   }
 }

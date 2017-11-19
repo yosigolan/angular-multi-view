@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {DesktopFrontpageComponentModel} from './desktop-frontpage.component.model';
-import {DomSanitizer, SafeResourceUrl} from '@angular/platform-browser';
+import {DomSanitizer} from '@angular/platform-browser';
+import {HomepageItems} from '../slider-item';
 
 @Component({
   selector: 'app-desktop-frontpage',
@@ -43,8 +44,14 @@ export class DesktopFrontpageComponent implements OnInit, AfterViewInit {
     imagesUrls.push('../../../assets/images/front-page/TripKinf_With_kids.jpg');
 
     imagesUrls.forEach((imageUrl: string) => {
-      let sanitizedImageUrl: SafeResourceUrl = this.sanitizer.bypassSecurityTrustResourceUrl(imageUrl);
-      this.model.sliderItems.push(sanitizedImageUrl);
+      let homepageItem: HomepageItems = new HomepageItems();
+      let randomNumber: number = Math.random();
+      let productId: number = Math.round(randomNumber) + 1;
+
+      homepageItem.imageSafeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(imageUrl);
+      homepageItem.productName = `product-${productId.toString()}`;
+
+      this.model.sliderItems.push(homepageItem);
     });
   }
 

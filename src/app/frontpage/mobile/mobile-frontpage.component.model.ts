@@ -1,17 +1,17 @@
-import {SafeResourceUrl} from '@angular/platform-browser';
+import {HomepageItems} from '../slider-item';
 
 export class MobileFrontpageComponentModel {
 
-  public sanitizedImageUrls: SafeResourceUrl[];
+  public sliderItems: HomepageItems[];
 
   constructor() {
-    this.sanitizedImageUrls = [];
+    this.sliderItems = [];
   }
 
   public clone(): MobileFrontpageComponentModel {
     let clonedModel: MobileFrontpageComponentModel = new MobileFrontpageComponentModel();
 
-    clonedModel.sanitizedImageUrls = Array.from(this.sanitizedImageUrls);
+    clonedModel.sliderItems = Array.from(this.sliderItems);
 
     return clonedModel;
   }

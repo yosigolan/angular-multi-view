@@ -1,8 +1,8 @@
-import {SafeResourceUrl} from '@angular/platform-browser';
+import {HomepageItems} from '../slider-item';
 
 export class DesktopFrontpageComponentModel {
 
-  public sliderItems: SafeResourceUrl[];
+  public sliderItems: HomepageItems[];
 
   constructor() {
     this.sliderItems = [];

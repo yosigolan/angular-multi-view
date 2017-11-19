@@ -1,5 +1,7 @@
-<ul class="images-list" *ngIf="myViewModel.sanitizedImageUrls">
-  <li class="image-item" *ngFor="let image of myViewModel.sanitizedImageUrls">
-    <img [src]="image" alt="">
+<ul class="images-list" *ngIf="myViewModel.sliderItems">
+  <li class="image-item" *ngFor="let sliderItem of myViewModel.sliderItems">
+    <a [routerLink]="['/', sliderItem.productName]">
+      <img [src]="sliderItem.imageSafeUrl" alt="{{sliderItem.productName}}">
+    </a>
   </li>
 </ul>

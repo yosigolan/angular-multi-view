@@ -5,24 +5,23 @@ import {AboutComponent} from './about/about.component';
 import {MobileFrontpageComponent} from './frontpage/mobile/mobile-frontpage.component';
 import {UserProfileComponent} from './user-profile/user-profile.component';
 import {ApplicationStateService} from '../services/application-state-service/applicationState.service';
-import {ProductsComponent} from './products/products.component';
-import {ProductComponent} from './products/product/product.component';
+import {ProductComponent} from './product/product.component';
 
 const desktop_routes: Routes = [
-  {path: '', component: DesktopFrontpageComponent},
-  {path: 'products/:id', component: ProductComponent},
-  {path: 'products', component: ProductsComponent},
-  {path: 'about', component: AboutComponent},
-  {path: '**', redirectTo: '', pathMatch: 'full'}
+  {
+    path: '', component: DesktopFrontpageComponent, children:
+    [
+      {path: ':productName', component: ProductComponent}
+    ]
+  },
+  {path: 'about', component: AboutComponent}
 ];
 
 const mobile_routes: Routes = [
   {path: '', component: MobileFrontpageComponent},
-  {path: 'products/:id', component: ProductComponent},
-  {path: 'products', component: ProductsComponent},
+  {path: ':productName', component: ProductComponent},
   {path: 'about', component: AboutComponent},
-  {path: 'user-profile', component: UserProfileComponent},
-  {path: '**', redirectTo: '', pathMatch: 'full'}
+  {path: 'user-profile', component: UserProfileComponent}
 ];
 
 @NgModule({
@@ -33,7 +32,8 @@ const mobile_routes: Routes = [
 })
 export class AppBrowserRoutingModule {
 
-  public constructor(private router: Router, private applicationStateService: ApplicationStateService) {
+  public constructor(private router: Router,
+    private applicationStateService: ApplicationStateService) {
 
     if (applicationStateService.getIsMobileResolution()) {
       router.resetConfig(mobile_routes);
