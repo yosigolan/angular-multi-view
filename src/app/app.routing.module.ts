@@ -4,8 +4,8 @@ import {DesktopFrontpageComponent} from './frontpage/desktop/desktop-frontpage.c
 import {AboutComponent} from './about/about.component';
 import {MobileFrontpageComponent} from './frontpage/mobile/mobile-frontpage.component';
 import {UserProfileComponent} from './user-profile/user-profile.component';
-import {ApplicationStateService} from '../services/application-state-service/applicationState.service';
 import {ProductComponent} from './product/product.component';
+import { ApplicationStateService } from './application-state.service';
 
 const desktop_routes: Routes = [
   {

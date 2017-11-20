@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Output} from '@angular/core';
-import {ApplicationStateService} from '../../services/application-state-service/applicationState.service';
+import { ApplicationStateService } from '../application-state.service';
 
 @Component({
   selector: 'app-user-profile',

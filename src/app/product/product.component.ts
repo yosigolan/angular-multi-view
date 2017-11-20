@@ -2,7 +2,7 @@ import {AfterViewInit, Component} from '@angular/core';
 import {ProductComponentModel} from './product.component.model';
 import {ActivatedRouteSnapshot, Router} from '@angular/router';
 import {DomSanitizer} from '@angular/platform-browser';
-import {ApplicationStateService} from '../../services/application-state-service/applicationState.service';
+import { ApplicationStateService } from '../application-state.service';
 
 @Component({
   selector: 'app-product',

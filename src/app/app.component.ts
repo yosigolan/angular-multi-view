@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {AppComponentModel} from './app.component.model';
 import {animate, style, transition, trigger} from '@angular/animations';
-import {ApplicationStateService} from '../services/application-state-service/applicationState.service';
+import { ApplicationStateService } from './application-state.service';
 
 @Component({
   selector: 'app-root',

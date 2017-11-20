@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {ApplicationStateService} from '../services/application-state-service/applicationState.service';
+import { ApplicationStateService } from './application-state.service';
 
 /**
  * this module include services that must be singeltons. it should only be included in the app module
