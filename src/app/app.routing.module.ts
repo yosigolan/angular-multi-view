@@ -14,14 +14,18 @@ const desktop_routes: Routes = [
       {path: 'product/:productName', component: ProductComponent}
     ]
   },
-  {path: 'about', component: AboutComponent}
+  {path: 'about', component: AboutComponent},
+  // directs all other routes to the main page
+  {path: '**', redirectTo: ''}
 ];
 
 const mobile_routes: Routes = [
   {path: '', component: MobileFrontpageComponent},
   {path: 'product/:productName', component: ProductComponent},
   {path: 'about', component: AboutComponent},
-  {path: 'user-profile', component: UserProfileComponent}
+  {path: 'user-profile', component: UserProfileComponent},
+  // directs all other routes to the main page
+  {path: '**', redirectTo: ''}
 ];
 
 @NgModule({
