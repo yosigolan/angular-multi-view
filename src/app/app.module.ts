@@ -9,6 +9,7 @@ import { CoreModule } from './core.module';
 import { ProductComponent } from './product/product.component';
 import { DesktopFrontpageComponent } from './frontpage/desktop/desktop-frontpage.component';
 import { MobileFrontpageComponent } from './frontpage/mobile/mobile-frontpage.component';
+import {MatTabsModule} from '@angular/material';
 
 @NgModule({
   declarations:    [
@@ -23,7 +24,8 @@ import { MobileFrontpageComponent } from './frontpage/mobile/mobile-frontpage.co
     BrowserModule,
     BrowserAnimationsModule,
     CoreModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatTabsModule
   ],
   entryComponents: [
     UserProfileComponent,
