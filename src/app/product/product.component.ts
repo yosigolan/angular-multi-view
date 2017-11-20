@@ -22,7 +22,9 @@ export class ProductComponent implements AfterViewInit {
     this.isMobileResolution = applicationStateService.getIsMobileResolution();
     this.model = new ProductComponentModel(sanitizer);
     this.myViewModel = new ProductComponentModel(sanitizer);
+
     this.loadProduct();
+
     this.updateView();
   }
 
@@ -48,7 +50,7 @@ export class ProductComponent implements AfterViewInit {
   }
 
   private loadProduct(): void {
-    if (this.getProductNameParam() === 'product-1') {
+    if (this.getProductNameParam() === 'funnel') {
       this.model.name = 'Funnel';
       this.model.description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse metus sem, consectetur consequat hendrerit in, volutpat sit amet lectus. Nullam sed pretium dolor. Nam sit amet bibendum nibh, ac hendrerit elit. Curabitur scelerisque placerat suscipit. Fusce vitae interdum lacus. Aliquam et massa arcu. Duis eget aliquet erat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut sagittis sed eros vehicula pulvinar. Nunc tempus nunc vitae magna sollicitudin tincidunt. Curabitur semper tincidunt lorem. Cras venenatis tincidunt arcu, id convallis urna aliquet quis. It putes the "fun" in funnel!';
       this.model.imageUrl = this.sanitizer.bypassSecurityTrustResourceUrl('../../../assets/images/product-1.jpg');

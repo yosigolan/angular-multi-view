@@ -12,7 +12,7 @@ export class DesktopFrontpageComponent implements OnInit, AfterViewInit {
 
   private model: DesktopFrontpageComponentModel;
   public myViewModel: DesktopFrontpageComponentModel;
-  
+
   @ViewChild('slider') public slider: ElementRef;
 
   constructor(private sanitizer: DomSanitizer) {
@@ -37,19 +37,26 @@ export class DesktopFrontpageComponent implements OnInit, AfterViewInit {
   private updateImageUrls(): void {
     let imagesUrls: string[] = [];
 
-    imagesUrls.push('../../../assets/images/front-page/TripKind_Art_and_ museums.jpg');
-    imagesUrls.push('../../../assets/images/front-page/TripKind_Gastronomy.jpg');
-    imagesUrls.push('../../../assets/images/front-page/Tripkind_NightLife.jpg');
-    imagesUrls.push('../../../assets/images/front-page/TripKind_Sightseeing.jpg');
-    imagesUrls.push('../../../assets/images/front-page/TripKinf_With_kids.jpg');
+    imagesUrls.push(
+      '../../../assets/images/front-page/xbox.jpg',
+      '../../../assets/images/front-page/iphone.jpg',
+      '../../../assets/images/front-page/ipad.jpg',
+      '../../../assets/images/front-page/hoverboard.jpg',
+      '../../../assets/images/front-page/banana-guard.jpg'
+    );
 
-    imagesUrls.forEach((imageUrl: string) => {
+    imagesUrls.forEach((imageUrl: string, index: number) => {
       let homepageItem: HomepageItems = new HomepageItems();
-      let randomNumber: number = Math.random();
-      let productId: number = Math.round(randomNumber) + 1;
+      let productName: string = '';
+
+      if (index % 2) {
+        productName = 'chair';
+      } else {
+        productName = 'funnel';
+      }
 
       homepageItem.imageSafeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(imageUrl);
-      homepageItem.productName = `product-${productId.toString()}`;
+      homepageItem.productName = productName;
 
       this.model.sliderItems.push(homepageItem);
     });
