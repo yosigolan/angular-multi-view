@@ -21,20 +21,15 @@ import {ApplicationStateService} from '../services/application-state-service/app
 })
 export class AppComponent {
 
-  private model: AppComponentModel;
   public myViewModel: AppComponentModel;
-
   public isMobileResolution: boolean;
+  private model: AppComponentModel;
 
   constructor(private applicationStateService: ApplicationStateService) {
     this.model = new AppComponentModel();
     this.myViewModel = new AppComponentModel();
 
     this.isMobileResolution = this.applicationStateService.getIsMobileResolution();
-  }
-
-  private updateView(): void {
-    this.myViewModel = this.model.clone();
   }
 
   public onUserProfileClick(): void {
@@ -45,5 +40,9 @@ export class AppComponent {
     }
 
     this.updateView();
+  }
+
+  private updateView(): void {
+    this.myViewModel = this.model.clone();
   }
 }

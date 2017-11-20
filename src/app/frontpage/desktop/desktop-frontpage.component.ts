@@ -12,7 +12,7 @@ export class DesktopFrontpageComponent implements OnInit, AfterViewInit {
 
   private model: DesktopFrontpageComponentModel;
   public myViewModel: DesktopFrontpageComponentModel;
-
+  
   @ViewChild('slider') public slider: ElementRef;
 
   constructor(private sanitizer: DomSanitizer) {

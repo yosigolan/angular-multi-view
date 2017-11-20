@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {MobileFrontpageComponentModel} from './mobile-frontpage.component.model';
-import {DomSanitizer, SafeResourceUrl} from '@angular/platform-browser';
+import {DomSanitizer} from '@angular/platform-browser';
 import {HomepageItems} from '../slider-item';
 
 @Component({
@@ -10,8 +10,8 @@ import {HomepageItems} from '../slider-item';
 })
 export class MobileFrontpageComponent implements OnInit, AfterViewInit {
 
-  private model: MobileFrontpageComponentModel;
   public myViewModel: MobileFrontpageComponentModel;
+  private model: MobileFrontpageComponentModel;
 
   constructor(private sanitizer: DomSanitizer) {
     this.model = new MobileFrontpageComponentModel();
