@@ -5,6 +5,6 @@ it demonstrates an example for angular application with multiple views (for mult
 
 ## Running
 
-clone the project /n
-run: npm install /n
+clone the project \n
+run: npm install \n
 run: ng s
