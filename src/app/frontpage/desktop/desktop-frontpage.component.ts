@@ -67,7 +67,8 @@ export class DesktopFrontpageComponent implements OnInit, AfterViewInit {
       style: 'flat',
       scrollwheel: true,
       loop: true,
-      spacing: -0.35
+      spacing: -0.35,
+      buttons: true
     });
   }
 }
