@@ -8,22 +8,22 @@ import {ProductComponent} from './product/product.component';
 import { ApplicationStateService } from './application-state.service';
 
 const desktop_routes: Routes = [
+  {path: 'about', component: AboutComponent},
   {
     path: '', component: DesktopFrontpageComponent, children:
     [
-      {path: 'product/:productName', component: ProductComponent}
+      {path: ':productName', component: ProductComponent}
     ]
   },
-  {path: 'about', component: AboutComponent},
   // directs all other routes to the main page
   {path: '**', redirectTo: ''}
 ];
 
 const mobile_routes: Routes = [
   {path: '', component: MobileFrontpageComponent},
-  {path: 'product/:productName', component: ProductComponent},
   {path: 'about', component: AboutComponent},
   {path: 'user-profile', component: UserProfileComponent},
+  {path: ':productName', component: ProductComponent},
   // directs all other routes to the main page
   {path: '**', redirectTo: ''}
 ];

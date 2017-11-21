@@ -5,7 +5,7 @@
 <div class="slider" #slider *ngIf="myViewModel.sliderItems">
   <ul class="slides">
     <li class="slide" *ngFor="let sliderItem of myViewModel.sliderItems">
-      <a [routerLink]="['/product', sliderItem.productName]">
+      <a [routerLink]="[sliderItem.productName]">
         <img [src]="sliderItem.imageSafeUrl" [alt]="sliderItem.productName">
       </a>
     </li>

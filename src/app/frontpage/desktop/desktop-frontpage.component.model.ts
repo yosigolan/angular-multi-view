@@ -1,8 +1,10 @@
-import {HomepageItems} from '../slider-item';
+
+
+import { HomepageItem } from '../homepage-item';
 
 export class DesktopFrontpageComponentModel {
 
-  public sliderItems: HomepageItems[];
+  public sliderItems: HomepageItem[];
 
   constructor() {
     this.sliderItems = [];

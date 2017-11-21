@@ -1,7 +1,7 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {MobileFrontpageComponentModel} from './mobile-frontpage.component.model';
 import {DomSanitizer} from '@angular/platform-browser';
-import {HomepageItems} from '../slider-item';
+import { HomepageItem } from '../homepage-item';
 
 @Component({
   selector: 'app-mobile-frontpage',
@@ -44,7 +44,7 @@ export class MobileFrontpageComponent implements OnInit, AfterViewInit {
     );
 
     imagesUrls.forEach((imageUrl: string, index: number) => {
-      let homepageItem: HomepageItems = new HomepageItems();
+      let homepageItem: HomepageItem = new HomepageItem();
       let productName: string = '';
 
       if (index % 2) {

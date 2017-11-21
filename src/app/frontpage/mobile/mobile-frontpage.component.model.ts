@@ -1,8 +1,9 @@
-import {HomepageItems} from '../slider-item';
+
+import { HomepageItem } from '../homepage-item';
 
 export class MobileFrontpageComponentModel {
 
-  public sliderItems: HomepageItems[];
+  public sliderItems: HomepageItem[];
 
   constructor() {
     this.sliderItems = [];

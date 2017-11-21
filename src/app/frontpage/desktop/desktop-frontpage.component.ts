@@ -1,7 +1,7 @@
 import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {DesktopFrontpageComponentModel} from './desktop-frontpage.component.model';
 import {DomSanitizer} from '@angular/platform-browser';
-import {HomepageItems} from '../slider-item';
+import { HomepageItem } from '../homepage-item';
 
 @Component({
   selector: 'app-desktop-frontpage',
@@ -46,7 +46,7 @@ export class DesktopFrontpageComponent implements OnInit, AfterViewInit {
     );
 
     imagesUrls.forEach((imageUrl: string, index: number) => {
-      let homepageItem: HomepageItems = new HomepageItems();
+      let homepageItem: HomepageItem = new HomepageItem();
       let productName: string = '';
 
       if (index % 2) {

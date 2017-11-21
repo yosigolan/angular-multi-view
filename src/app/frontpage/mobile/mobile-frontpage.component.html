@@ -4,7 +4,7 @@
 
 <ul class="images-list" *ngIf="myViewModel.sliderItems">
   <li class="image-item" *ngFor="let sliderItem of myViewModel.sliderItems">
-    <a [routerLink]="['/product', sliderItem.productName]">
+    <a [routerLink]="[sliderItem.productName]">
       <img [src]="sliderItem.imageSafeUrl" alt="{{sliderItem.productName}}">
     </a>
   </li>

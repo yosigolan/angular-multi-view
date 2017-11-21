@@ -1,6 +1,6 @@
 import {SafeResourceUrl} from '@angular/platform-browser';
 
-export class HomepageItems {
+export class HomepageItem {
 
   public imageSafeUrl: SafeResourceUrl;
   public productName: string;

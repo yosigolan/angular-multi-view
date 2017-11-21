@@ -1,23 +1,5 @@
 <div class="container-fluid">
-  <nav class="navbar fixed-top navbar-light bg-light">
-    <a class="logo" routerLink="/">
-      <i class="fa fa-home fa-2x" aria-hidden="true"></i>
-    </a>
-
-    <ul class="nav justify-content-end align-items-center">
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/about">About</a>
-      </li>
-
-      <li class="nav-item" *ngIf="!isMobileResolution">
-        <a class="nav-link" (click)="onUserProfileClick()">User Profile</a>
-      </li>
-
-      <li class="nav-item" *ngIf="isMobileResolution">
-        <a class="nav-link" routerLink="/user-profile">User Profile</a>
-      </li>
-    </ul>
-  </nav>
+ <app-header></app-header>
 
   <main id="main-content">
     <div class="container main-content">
@@ -25,7 +7,5 @@
     </div>
   </main>
 
-  <app-user-profile *ngIf="myViewModel.isToShowUserProfile"
-                    [@userProfileAnimation]>
-  </app-user-profile>
+
 </div>

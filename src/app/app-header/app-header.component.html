@@ -1,0 +1,21 @@
+<nav class="navbar fixed-top navbar-light bg-light">
+  <a class="logo" routerLink="/">
+    <i class="fa fa-home fa-2x" aria-hidden="true"></i>
+  </a>
+
+  <ul class="nav justify-content-end align-items-center">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/about">About</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" (click)="onUserProfileClick()">User Profile</a>
+    </li>
+
+  </ul>
+</nav>
+
+<app-user-profile *ngIf="isToShowUserProfile"
+                  [@userProfileAnimation]>
+</app-user-profile>
+

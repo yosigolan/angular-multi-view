@@ -10,6 +10,7 @@ import {ProductComponent} from './product/product.component';
 import {DesktopFrontpageComponent} from './frontpage/desktop/desktop-frontpage.component';
 import {MobileFrontpageComponent} from './frontpage/mobile/mobile-frontpage.component';
 import {MatTabsModule} from '@angular/material';
+import { AppHeaderComponent } from './app-header/app-header.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {MatTabsModule} from '@angular/material';
     UserProfileComponent,
     ProductComponent,
     DesktopFrontpageComponent,
-    MobileFrontpageComponent
+    MobileFrontpageComponent,
+    AppHeaderComponent
   ],
   imports: [
     BrowserModule,
