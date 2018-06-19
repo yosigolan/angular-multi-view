@@ -4,32 +4,20 @@ import {ActivatedRouteSnapshot, Router} from '@angular/router';
 import {DomSanitizer} from '@angular/platform-browser';
 import { ApplicationStateService } from '../application-state.service';
 
-@Component({
-  selector: 'app-product',
-  templateUrl: './product.component.html',
-  styleUrls: ['./product.component.scss']
-})
-export class ProductComponent implements AfterViewInit {
+
+export abstract class ProductComponent {
 
   private model: ProductComponentModel;
   public myViewModel: ProductComponentModel;
 
-  public isMobileResolution: boolean;
-
   constructor(private router: Router,
-    private sanitizer: DomSanitizer,
-    private applicationStateService: ApplicationStateService) {
-    this.isMobileResolution = applicationStateService.getIsMobileResolution();
+    private sanitizer: DomSanitizer) {
+
     this.model = new ProductComponentModel(sanitizer);
     this.myViewModel = new ProductComponentModel(sanitizer);
 
     this.loadProduct();
-
     this.updateView();
-  }
-
-  public ngAfterViewInit(): void {
-    window.scrollTo(0, 0);
   }
 
   private getProductNameParam(): string {

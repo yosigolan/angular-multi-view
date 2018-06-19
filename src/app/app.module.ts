@@ -11,13 +11,16 @@ import {DesktopFrontpageComponent} from './frontpage/desktop/desktop-frontpage.c
 import {MobileFrontpageComponent} from './frontpage/mobile/mobile-frontpage.component';
 import {MatTabsModule} from '@angular/material';
 import { AppHeaderComponent } from './app-header/app-header.component';
+import { ProductComponentMobile } from './product/product.component.mobile';
+import { ProductComponentDesktop } from './product/product.component.desktop';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
     UserProfileComponent,
-    ProductComponent,
+    ProductComponentDesktop,
+    ProductComponentMobile,
     DesktopFrontpageComponent,
     MobileFrontpageComponent,
     AppHeaderComponent
@@ -31,7 +34,8 @@ import { AppHeaderComponent } from './app-header/app-header.component';
   ],
   entryComponents: [
     UserProfileComponent,
-    MobileFrontpageComponent
+    MobileFrontpageComponent,
+    ProductComponentMobile
   ],
   bootstrap: [
     AppComponent

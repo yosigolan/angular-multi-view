@@ -6,13 +6,15 @@ import {MobileFrontpageComponent} from './frontpage/mobile/mobile-frontpage.comp
 import {UserProfileComponent} from './user-profile/user-profile.component';
 import {ProductComponent} from './product/product.component';
 import { ApplicationStateService } from './application-state.service';
+import { ProductComponentDesktop } from './product/product.component.desktop';
+import { ProductComponentMobile } from './product/product.component.mobile';
 
 const desktop_routes: Routes = [
   {path: 'about', component: AboutComponent},
   {
     path: '', component: DesktopFrontpageComponent, children:
     [
-      {path: ':productName', component: ProductComponent}
+      {path: ':productName', component: ProductComponentDesktop}
     ]
   },
   // directs all other routes to the main page
@@ -23,7 +25,7 @@ const mobile_routes: Routes = [
   {path: '', component: MobileFrontpageComponent},
   {path: 'about', component: AboutComponent},
   {path: 'user-profile', component: UserProfileComponent},
-  {path: ':productName', component: ProductComponent},
+  {path: ':productName', component: ProductComponentMobile},
   // directs all other routes to the main page
   {path: '**', redirectTo: ''}
 ];
