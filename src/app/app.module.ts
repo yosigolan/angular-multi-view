@@ -13,12 +13,16 @@ import {MatTabsModule} from '@angular/material';
 import { AppHeaderComponent } from './app-header/app-header.component';
 import { ProductComponentMobile } from './product/product.component.mobile';
 import { ProductComponentDesktop } from './product/product.component.desktop';
+import { UserProfileComponentDesktop } from './user-profile/user-profile.component.desktop';
+import { UserProfileComponentMobile } from './user-profile/user-profile.component.mobile';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
     UserProfileComponent,
+    UserProfileComponentDesktop,
+    UserProfileComponentMobile,
     ProductComponentDesktop,
     ProductComponentMobile,
     DesktopFrontpageComponent,

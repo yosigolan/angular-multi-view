@@ -3,8 +3,7 @@ import { ApplicationStateService } from '../application-state.service';
 
 @Component({
   selector: 'app-user-profile',
-  templateUrl: './user-profile.component.html',
-  styleUrls: ['./user-profile.component.scss']
+  templateUrl: './user-profile.component.html'
 })
 export class UserProfileComponent {
 
