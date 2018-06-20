@@ -10,15 +10,11 @@ import { ProductComponent } from './product.component';
   templateUrl: './product.component.mobile.html',
   styleUrls: ['./product.component.mobile.scss']
 })
-export class ProductComponentMobile extends ProductComponent implements AfterViewInit {
+export class ProductComponentMobile extends ProductComponent {
 
   constructor(router: Router,
     sanitizer: DomSanitizer) {
     super(router,sanitizer);
    }
-
-  public ngAfterViewInit(): void {
-    window.scrollTo(0, 0);
-  }
 
 }
